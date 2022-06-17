@@ -1,11 +1,11 @@
 module.exports = {
   // Placeholder used to rename and replace in files
   // package.json, index.json, android/, ios/
-  placeholderName: "ReactNativeDrewTemplate",
+  placeholderName: "ProjectName",
 
   // Placeholder title that will be replaced in values.xml
   // and Infp.plist with title provided by the user
-  titlePlaceholder: "React Native Drew Template",
+  titlePlaceholder: "ProjectName",
 
   // Directory with template
   templateDir: "./template",
