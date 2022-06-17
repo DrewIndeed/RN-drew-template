@@ -1,21 +1,29 @@
 import React from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Message } from './redux/Message';
+import {Header} from 'react-native/Libraries/NewAppScreen';
 
 const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  ios: 'Press Cmd+R to reload,\n' + 'Press Cmd+D or shake for dev menu\n',
   android:
     'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
+    'Shake or press menu button for dev menu\n',
 });
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native - bootstrapped with Drew Template!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
-      </View>
+      <Provider store={store}>
+         <View style={styles.container}>
+           <Header />
+           <Text style={styles.welcome}>Created with Drew Template!</Text>
+           <Text style={styles.instructions}>To get started, edit App.js</Text>
+           <Text style={styles.instructions}>{instructions}</Text>
+           <Message />
+         </View>
+      </Provider>
     );
   }
 }
@@ -28,13 +36,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 25,
     textAlign: 'center',
-    margin: 10,
+    marginTop: 200,
   },
   instructions: {
     textAlign: 'center',
     color: '#333333',
-    marginBottom: 5,
+    marginBottom: 30,
   },
 });
