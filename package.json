@@ -2,7 +2,7 @@
   "name": "rntesttemplate",
   "version": "0.0.1",
   "description": "React Native Template",
-  "repository": "git@github.com/DrewIndeed/RNTestTemplate.git",
+  "repository": "git@github.com/DrewIndeed/RN-drew-template.git",
   "author": "Andrew Le Nguyen",
   "license": "MIT"
 }
